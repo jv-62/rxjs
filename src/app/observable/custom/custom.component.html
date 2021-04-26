@@ -1,0 +1,32 @@
+<div class="my-3">
+    <h2>Custom</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex - 01 (Manual)</strong>
+            <hr>
+            <ul [ngClass]="techStatus =='completed'?'completed':techStatus == 'error'?'error':''" class="techList" id="manualList"></ul>
+        </div>
+        <div class="col-md-6">
+            <strong>Ex - 01 (Custom interval observable)</strong>
+            <hr>
+            <ul [ngClass]="techStatus2 =='completed'?'completed':techStatus2 == 'error'?'error':''" class="techList" id="customList"></ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <strong>Ex - 03 (Random names)</strong>
+            <br><br>
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Random</strong>
+                'Jayam','Kenil','Hardik','John','Doe','Anuj','Rishab','Nirmal'
+            </p>
+            <hr>
+            <p>Current Name : <strong>{{name}}</strong></p>
+            <!-- {{randomStatus}} -->
+            <!-- <span class="badge bg-success">Sus</span> -->
+            <span class="badge " [ngClass]="randomStatus == 'complete' ? 'bg-success' : randomStatus == 'error' ? 'bg-danger' : 'bg-primary'">{{randomStatus == 'complete' ? 'Success' : randomStatus == 'error' ? 'Error' : 'Running'}}</span>
+        </div>
+    </div>
+</div>

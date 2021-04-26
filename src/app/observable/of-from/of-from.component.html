@@ -1,0 +1,69 @@
+<div class="my-3">
+    <h2>Of and From</h2>
+    <br>
+    <strong>Ex :- 01 (OF)</strong>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Data</strong>
+                Of('Angular','Typescript','Javascript')
+            </p>
+            <hr>
+            <ul id="odData"></ul>
+        </div>
+        <div class="col-md-6">
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Data</strong>
+                Of(&#123;a:'Angular', b:'Typescript', c:'Javascript', d:'Nodejs'&#125;)
+            </p>
+            <hr>
+            <ul>
+                <li><strong>a : </strong>{{obsMsg.a}}</li>
+                <li><strong>b : </strong>{{obsMsg.b}}</li>
+                <li><strong>c : </strong>{{obsMsg.c}}</li>
+                <li><strong>d : </strong>{{obsMsg.d}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Of and From</h2>
+    <br>
+    <strong>Ex :- 02 (FROM)</strong>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Array</strong>
+            </p>
+            <hr>
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Data</strong>
+                from(['Angular', 'Typescript', 'Javascript'])
+            </p>
+            <ul id="fromData"></ul>
+        </div>
+        <div class="col-md-4">
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Promise</strong>
+            </p>
+            <hr>
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Data</strong>
+                Promise to observable
+            </p>
+            <ul id="fromPromiseData"></ul>
+        </div>
+        <div class="col-md-4">
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>String</strong>
+            </p>
+            <hr>
+            <p class="border rounded bg-light py-3 px-3">
+                <strong>Data</strong>
+                String to observable
+            </p>
+            <ul id="fromStringData"></ul>
+        </div>
+    </div>
+</div>

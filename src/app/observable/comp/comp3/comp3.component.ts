@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/appService/app.service';
+
+@Component({
+  selector: 'app-comp3',
+  templateUrl: './comp3.component.html',
+  styleUrls: ['./comp3.component.scss']
+})
+export class Comp3Component implements OnInit {
+
+  userName: string;
+  constructor(private _service : AppService) { }
+
+  ngOnInit(): void {
+    this._service.userName.subscribe(res => {
+      this.userName = res;
+    })
+  }
+  updateUserName(uName) {
+    this._service.userName.next(uName.value)
+  }
+
+}
