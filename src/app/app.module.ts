@@ -31,6 +31,15 @@ import { ReplaySubjectComponent } from './observable/replay-subject/replay-subje
 import { AsyncSubjectComponent } from './observable/async-subject/async-subject.component';
 import { ConcatComponent } from './observable/concat/concat.component';
 import { MergeComponent } from './observable/merge/merge.component';
+import { MergemapComponent } from './observable/mergemap/mergemap.component';
+import { ConcatmapComponent } from './observable/concatmap/concatmap.component';
+import { Concatmap2Component } from './observable/concatmap2/concatmap2.component';
+import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
+import { SwitchMapExampleComponent } from './observable/switch-map-example/switch-map-example.component';
+import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
+import { CombineLatestComponent } from './observable/combine-latest/combine-latest.component';
+import { ZipComponent } from './observable/zip/zip.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +67,16 @@ import { MergeComponent } from './observable/merge/merge.component';
     ReplaySubjectComponent,
     AsyncSubjectComponent,
     ConcatComponent,
-    MergeComponent
+    MergeComponent,
+    MergemapComponent,
+    ConcatmapComponent,
+    Concatmap2Component,
+    SwitchmapComponent,
+    SwitchMapExampleComponent,
+    ExhaustMapComponent,
+    ShareReplayComponent,
+    CombineLatestComponent,
+    ZipComponent
   ],
   imports: [
     BrowserModule,
