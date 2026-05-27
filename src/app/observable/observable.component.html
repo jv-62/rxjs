@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<div class="observable-shell">
+  <div class="observable-header">
+    <div>
+      <h2>Observable Playground</h2>
+    </div>
+    <button
+      class="btn btn-secondary back-btn"
+      *ngIf="showBackButton"
+      (click)="goBack()"
+    >
+      ← Back
+    </button>
+  </div>
+
+  <div class="observable-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
