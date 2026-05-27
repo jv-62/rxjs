@@ -1,5 +1,9 @@
 .observable-shell {
   margin-top: 1.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(28, 47, 74, 0.08);
+  padding: 1.5rem;
 }
 
 .observable-header {
@@ -9,25 +13,48 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  padding: 1rem 1rem 0.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .observable-header h2 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
 }
 
 .subtitle {
-  margin: 0.35rem 0 0;
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 0.95rem;
+  margin: 0.4rem 0 0;
+  color: #5f6f89;
+  font-size: 1rem;
+  max-width: 600px;
+  line-height: 1.55;
 }
 
 .back-btn {
-  min-width: 100px;
+  min-width: 120px;
+  border-radius: 999px;
+  border: 1px solid #d0d8e6;
+  background: #f6f8fb;
+  color: #1f2a44;
+  padding: 0.75rem 1.2rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #e9eef7;
+  transform: translateY(-1px);
 }
 
 .observable-content {
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
+
+@media (max-width: 720px) {
+  .observable-shell {
+    padding: 1rem;
+  }
+
+  .observable-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
