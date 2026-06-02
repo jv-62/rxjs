@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  ViewChild
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { combineLatest, fromEvent } from 'rxjs';
 import { map, pluck, withLatestFrom } from 'rxjs/operators';
 
