@@ -15,15 +15,15 @@ export class ObservableComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
-    private location: Location,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
     this.updateBackButton(this.router.url);
     this.router.events
       .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        takeUntil(this.destroy$),
+        filter(event => event instanceof NavigationEnd),
+        takeUntil(this.destroy$)
       )
       .subscribe((event: NavigationEnd) => {
         this.updateBackButton(event.urlAfterRedirects);

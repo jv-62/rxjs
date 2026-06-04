@@ -8,9 +8,8 @@ describe('DebounceTimeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DebounceTimeComponent ]
-    })
-    .compileComponents();
+      declarations: [DebounceTimeComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

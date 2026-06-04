@@ -8,9 +8,8 @@ describe('ExhaustMapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExhaustMapComponent ]
-    })
-    .compileComponents();
+      declarations: [ExhaustMapComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

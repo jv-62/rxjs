@@ -5,23 +5,22 @@ import { AppService } from '../../appService/app.service';
 @Component({
   selector: 'app-from-event',
   templateUrl: './from-event.component.html',
-  styleUrls: ['./from-event.component.scss']
+  styleUrls: ['./from-event.component.scss'],
 })
 export class FromEventComponent implements OnInit, AfterViewInit {
-  constructor(private _service : AppService) { }
+  constructor(private _service: AppService) {}
 
   @ViewChild('addVideoBtn') addVideoBtn?: ElementRef;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit() {
     if (this.addVideoBtn) {
       let i = 1;
       fromEvent(this.addVideoBtn.nativeElement, 'click').subscribe(res => {
         // console.log("Video " + i++)
-        this._service.print("Video " + i++,'AddChildElement')
-      })
+        this._service.print('Video ' + i++, 'AddChildElement');
+      });
     }
   }
 
@@ -31,5 +30,4 @@ export class FromEventComponent implements OnInit, AfterViewInit {
   //   elem.innerText = data;
   //   document.getElementById('AddChildElement')?.appendChild(elem);
   // }
-
 }

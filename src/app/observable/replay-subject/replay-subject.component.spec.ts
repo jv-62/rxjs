@@ -8,9 +8,8 @@ describe('ReplaySubjectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReplaySubjectComponent ]
-    })
-    .compileComponents();
+      declarations: [ReplaySubjectComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

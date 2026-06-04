@@ -8,9 +8,8 @@ describe('PluckComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PluckComponent ]
-    })
-    .compileComponents();
+      declarations: [PluckComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

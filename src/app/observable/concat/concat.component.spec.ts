@@ -8,9 +8,8 @@ describe('ConcatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConcatComponent ]
-    })
-    .compileComponents();
+      declarations: [ConcatComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

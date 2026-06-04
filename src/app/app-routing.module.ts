@@ -34,7 +34,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'promise', pathMatch: 'full' },
   { path: 'promise', component: PromiseComponent },
   {
-    path: 'observable', component: ObservableComponent, children: [
+    path: 'observable',
+    component: ObservableComponent,
+    children: [
       { path: '', component: AllComponent },
       { path: 'from-event', component: FromEventComponent },
       { path: 'interval', component: IntervalComponent },
@@ -62,12 +64,12 @@ const routes: Routes = [
       { path: 'share-replay', component: ShareReplayComponent },
       { path: 'combine-latest', component: CombineLatestComponent },
       { path: 'zip', component: ZipComponent },
-    ]
-  }
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

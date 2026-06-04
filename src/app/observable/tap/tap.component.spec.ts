@@ -8,9 +8,8 @@ describe('TapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TapComponent ]
-    })
-    .compileComponents();
+      declarations: [TapComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

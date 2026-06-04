@@ -10,7 +10,7 @@ export class Comp1Component implements OnInit {
   constructor(private _service: AppService) {}
   userName: string;
   ngOnInit(): void {
-    this._service.userName.subscribe((res) => {
+    this._service.userName.subscribe(res => {
       this.userName = res;
     });
   }

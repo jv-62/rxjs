@@ -11,7 +11,7 @@ export class Comp2Component implements OnInit {
   constructor(private _service: AppService) {}
 
   ngOnInit(): void {
-    this._service.userName.subscribe((res) => {
+    this._service.userName.subscribe(res => {
       this.userName = res;
     });
   }

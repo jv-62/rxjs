@@ -19,22 +19,13 @@ export class CustomComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Ex - 1 Manual
     let arr = ['Angular', 'Typescript', 'Javascript', 'Nodejs', 'Reactjs'];
-    let arr1 = [
-      'Jayam',
-      'Kenil',
-      'Hardik',
-      'John',
-      'Doe',
-      'Anuj',
-      'Rishab',
-      'Nirmal',
-    ];
+    let arr1 = ['Jayam', 'Kenil', 'Hardik', 'John', 'Doe', 'Anuj', 'Rishab', 'Nirmal'];
     // for (let i = 0; i < arr.length; i++) {
     //   setTimeout(() => {
     //     observer.next(arr)
     //   }, 1000*i);
     // }
-    var subObs1 = new Observable((observer) => {
+    var subObs1 = new Observable(observer => {
       setTimeout(() => {
         observer.next('Angular');
       }, 1000);
@@ -54,19 +45,19 @@ export class CustomComponent implements OnInit, OnDestroy {
       }, 5000);
     });
     subObs1.subscribe(
-      (res) => {
+      res => {
         // console.log(res);
         this._service.print(res, 'manualList');
       },
-      (err) => {
+      err => {
         this.techStatus = 'error';
       },
       () => {
         this.techStatus = 'completed';
-      },
+      }
     );
     // Ex - 2 (Custom Interval)
-    var subObs2 = new Observable((observer) => {
+    var subObs2 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
         observer.next(arr[count]);
@@ -78,20 +69,20 @@ export class CustomComponent implements OnInit, OnDestroy {
     });
 
     this.subscription = subObs2.subscribe(
-      (res) => {
+      res => {
         // console.log(res);
         this._service.print(res, 'customList');
       },
-      (err) => {
+      err => {
         this.techStatus2 = 'error';
       },
       () => {
         this.techStatus2 = 'completed';
-      },
+      }
     );
     // Ex - 3 (Random names)
 
-    var subObs3 = new Observable((observer) => {
+    var subObs3 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
         observer.next(arr1[count]);
@@ -102,16 +93,16 @@ export class CustomComponent implements OnInit, OnDestroy {
       }, 1000);
     });
     subObs3.subscribe(
-      (res) => {
+      res => {
         console.log('Res => ', res);
         this.name = res;
       },
-      (err) => {
+      err => {
         this.randomStatus = 'error';
       },
       () => {
         this.randomStatus = 'complete';
-      },
+      }
     );
   }
 

@@ -14,14 +14,14 @@ export class ConcatmapComponent implements OnInit {
   ngOnInit(): void {
     const source = from(['Tech', 'Comedy', 'News']);
     // Ex - 1 | Map
-    source.pipe(map((x) => this.getData(x))).subscribe((res) =>
-      res.subscribe((response) => {
+    source.pipe(map(x => this.getData(x))).subscribe(res =>
+      res.subscribe(response => {
         console.log(response);
         this._service.print(response, 'elContainer');
-      }),
+      })
     );
     // Ex - 2 | MergeMap
-    source.pipe(mergeMap((x) => this.getData(x))).subscribe((response) => {
+    source.pipe(mergeMap(x => this.getData(x))).subscribe(response => {
       console.log(response);
       this._service.print(response, 'elContainer1');
     });
@@ -34,7 +34,7 @@ export class ConcatmapComponent implements OnInit {
     //   this._service.print(response, 'elContainer1');
     // })
     // Ex - 3 | ConcatMap
-    source.pipe(concatMap((x) => this.getData(x))).subscribe((response) => {
+    source.pipe(concatMap(x => this.getData(x))).subscribe(response => {
       console.log(response);
       this._service.print(response, 'elContainer2');
     });

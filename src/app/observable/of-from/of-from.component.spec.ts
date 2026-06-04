@@ -8,9 +8,8 @@ describe('OfFromComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OfFromComponent ]
-    })
-    .compileComponents();
+      declarations: [OfFromComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

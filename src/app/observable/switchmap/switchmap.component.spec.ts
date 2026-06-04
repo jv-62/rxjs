@@ -8,9 +8,8 @@ describe('SwitchmapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SwitchmapComponent ]
-    })
-    .compileComponents();
+      declarations: [SwitchmapComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

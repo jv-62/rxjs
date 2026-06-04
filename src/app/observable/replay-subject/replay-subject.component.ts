@@ -25,7 +25,7 @@ export class ReplaySubjectComponent implements OnInit {
   videSubscription: Subscription;
 
   ngOnInit(): void {
-    this._service.videoEmit.subscribe((res) => {
+    this._service.videoEmit.subscribe(res => {
       this.user1List.push(res);
     });
   }
@@ -38,7 +38,7 @@ export class ReplaySubjectComponent implements OnInit {
     if (this.subscribeMode2) {
       this.subscription2.unsubscribe();
     } else {
-      this.subscription2 = this._service.videoEmit.subscribe((res) => {
+      this.subscription2 = this._service.videoEmit.subscribe(res => {
         this.user2List.push(res);
       });
     }
@@ -48,7 +48,7 @@ export class ReplaySubjectComponent implements OnInit {
     if (this.subscribeMode3) {
       this.subscription3.unsubscribe();
     } else {
-      this.subscription3 = this._service.videoEmit.subscribe((res) => {
+      this.subscription3 = this._service.videoEmit.subscribe(res => {
         this.user3List.push(res);
       });
     }
@@ -60,7 +60,7 @@ export class ReplaySubjectComponent implements OnInit {
       this.videSubscription.unsubscribe();
     } else {
       const broadCastVideo = interval(2000);
-      this.videSubscription = broadCastVideo.subscribe((res) => {
+      this.videSubscription = broadCastVideo.subscribe(res => {
         this._service.videoEmit.next('Video ' + res);
       });
     }

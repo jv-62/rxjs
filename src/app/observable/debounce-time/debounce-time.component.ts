@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
@@ -29,10 +23,10 @@ export class DebounceTimeComponent implements OnInit, AfterViewInit {
     const searchTerm = fromEvent<any>(this.myInput.nativeElement, 'keyup');
     searchTerm
       .pipe(
-        map((event) => event.target.value),
-        debounceTime(500),
+        map(event => event.target.value),
+        debounceTime(500)
       )
-      .subscribe((res) => {
+      .subscribe(res => {
         console.log(res);
         this.reqData = res;
         this._loadingBar.start();
@@ -45,11 +39,11 @@ export class DebounceTimeComponent implements OnInit, AfterViewInit {
     const searchTerm2 = fromEvent<any>(this.myInput2.nativeElement, 'keyup');
     searchTerm2
       .pipe(
-        map((event) => event.target.value),
+        map(event => event.target.value),
         debounceTime(500),
-        distinctUntilChanged(),
+        distinctUntilChanged()
       )
-      .subscribe((res) => {
+      .subscribe(res => {
         console.log(res);
         this.reqData2 = res;
         this._loadingBar.start();

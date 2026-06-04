@@ -76,16 +76,10 @@ import { ZipComponent } from './observable/zip/zip.component';
     ExhaustMapComponent,
     ShareReplayComponent,
     CombineLatestComponent,
-    ZipComponent
+    ZipComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    LoadingBarRouterModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, LoadingBarRouterModule, FormsModule],
   providers: [AppService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

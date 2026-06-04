@@ -11,7 +11,7 @@ export class AsyncSubjectComponent implements OnInit {
   asyncVideoEmit: any;
 
   ngOnInit(): void {
-    this._service.asyncVideoEmit.subscribe((res) => {
+    this._service.asyncVideoEmit.subscribe(res => {
       this.asyncVideoEmit = res;
     });
   }

@@ -46,8 +46,8 @@ export class Concatmap2Component implements OnInit {
   ];
   ngOnInit() {
     from(this.notifyData)
-      .pipe(concatMap((res) => this.getHtml(res)))
-      .subscribe((res) => {
+      .pipe(concatMap(res => this.getHtml(res)))
+      .subscribe(res => {
         console.log(res);
         this._service.print2(res, 'elContainer');
       });

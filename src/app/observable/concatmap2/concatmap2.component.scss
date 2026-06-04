@@ -1,13 +1,13 @@
 body {
   background: #f4f6fc;
-  
+
   &:after {
     content: 'Made with ❤️ by Adiel Hercules';
     position: absolute;
     top: 0;
     right: 0;
     padding: 10px;
-    background-color: #3F436B;
+    background-color: #3f436b;
     color: #fff;
     opacity: 0.6;
   }
@@ -19,18 +19,21 @@ body {
   width: 360px;
   height: 780px;
   background-color: #7371ee;
-  background-image: linear-gradient(60deg, #7371ee 1%,#a1d9d6 100%);
+  background-image: linear-gradient(60deg, #7371ee 1%, #a1d9d6 100%);
   border-radius: 40px;
-  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
-  
+  box-shadow:
+    0px 0px 0px 11px #1f1f1f,
+    0px 0px 0px 13px #191919,
+    0px 0px 0px 20px #111;
+
   &:before,
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   // home button indicator
   &:after {
     bottom: 7px;
@@ -39,7 +42,7 @@ body {
     background-color: #f2f2f2;
     border-radius: 10px;
   }
-  
+
   // frontal camera/speaker frame
   &:before {
     top: 0px;
@@ -48,7 +51,7 @@ body {
     background-color: #1f1f1f;
     border-radius: 0px 0px 40px 40px;
   }
-  
+
   i,
   b,
   s,
@@ -57,7 +60,7 @@ body {
     display: block;
     color: transparent;
   }
-  
+
   // speaker
   i {
     top: 0px;
@@ -69,7 +72,7 @@ body {
     border-radius: 8px;
     box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
   }
-  
+
   // camera
   b {
     left: 10%;
@@ -80,7 +83,7 @@ body {
     background-color: #101010;
     border-radius: 12px;
     box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
-    
+
     &:after {
       content: '';
       position: absolute;
@@ -96,7 +99,7 @@ body {
       box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
     }
   }
-  
+
   // time
   s {
     top: 50px;
@@ -108,7 +111,7 @@ body {
     font-weight: 100;
     padding-top: 60px;
   }
-  
+
   // action buttons
   span {
     bottom: 50px;
@@ -117,7 +120,7 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     left: 30px;
-    
+
     & + span {
       left: auto;
       right: 30px;
@@ -125,7 +128,7 @@ body {
   }
 }
 // For notification
-.notification{
+.notification {
   background: #fff;
   position: absolute;
   top: 50%;
@@ -134,29 +137,29 @@ body {
   width: 100%;
   padding: 0 5px;
 }
-.notification .item{
+.notification .item {
   overflow: hidden;
 }
-.notification .item:not(:first-child){
+.notification .item:not(:first-child) {
   border-top: 1px solid #f5f5f5;
 }
-.notification .header{
+.notification .header {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
   font-weight: 600;
   padding: 5px 0 10px;
 }
-.notification .header .time{
-  opacity: .3;
+.notification .header .time {
+  opacity: 0.3;
   font-size: 12px;
   font-weight: 500;
 }
-.notification .body{
+.notification .body {
   font-size: 13px;
   line-height: normal;
 }
-.notification .body .item-img{
+.notification .body .item-img {
   float: right;
   margin: 0 0 0 10px;
   border: 1px solid #989898;

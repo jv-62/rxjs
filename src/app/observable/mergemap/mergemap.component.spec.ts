@@ -8,9 +8,8 @@ describe('MergemapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MergemapComponent ]
-    })
-    .compileComponents();
+      declarations: [MergemapComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

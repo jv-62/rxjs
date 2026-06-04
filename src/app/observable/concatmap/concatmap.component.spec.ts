@@ -8,9 +8,8 @@ describe('ConcatmapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConcatmapComponent ]
-    })
-    .compileComponents();
+      declarations: [ConcatmapComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

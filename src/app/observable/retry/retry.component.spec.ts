@@ -8,9 +8,8 @@ describe('RetryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RetryComponent ]
-    })
-    .compileComponents();
+      declarations: [RetryComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -10,15 +10,7 @@ import { map, pluck, withLatestFrom } from 'rxjs/operators';
 export class CombineLatestComponent implements AfterViewInit {
   constructor() {}
 
-  nameSource = [
-    'Jayam',
-    'Kenil',
-    'Manoj',
-    'Hozefa',
-    'Vishal',
-    'Kishan',
-    'Hardik',
-  ];
+  nameSource = ['Jayam', 'Kenil', 'Manoj', 'Hozefa', 'Vishal', 'Kishan', 'Hardik'];
   colorSource = ['Red', 'Purple', 'Pink', 'Yellow', 'Green', 'Orange', 'Blue'];
 
   // Template Reference
@@ -27,12 +19,8 @@ export class CombineLatestComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     // Observable
-    const nameObs = fromEvent<any>(this.name.nativeElement, 'change').pipe(
-      map((event) => event.target.value),
-    );
-    const colorObs = fromEvent<any>(this.color.nativeElement, 'change').pipe(
-      pluck('target', 'value'),
-    );
+    const nameObs = fromEvent<any>(this.name.nativeElement, 'change').pipe(map(event => event.target.value));
+    const colorObs = fromEvent<any>(this.color.nativeElement, 'change').pipe(pluck('target', 'value'));
 
     // Ex :- 01 CombineLatest
     combineLatest(nameObs, colorObs).subscribe(([name, color]) => {
@@ -56,7 +44,7 @@ export class CombineLatestComponent implements AfterViewInit {
                               border: 1px solid currentColor;
                               display: flex;
                               margin: 0 10px;
-                              padding: 10px;`,
+                              padding: 10px;`
     );
     document.getElementById(containerId).appendChild(el);
   }

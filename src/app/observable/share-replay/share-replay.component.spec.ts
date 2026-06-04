@@ -8,9 +8,8 @@ describe('ShareReplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShareReplayComponent ]
-    })
-    .compileComponents();
+      declarations: [ShareReplayComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -8,9 +8,8 @@ describe('IntervalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IntervalComponent ]
-    })
-    .compileComponents();
+      declarations: [IntervalComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
