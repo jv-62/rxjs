@@ -20,7 +20,9 @@ export class IntervalComponent implements OnInit {
       // console.log("video " + i++);
       this.obsMsg = 'video ' + i++;
       this._service.print(this.obsMsg, 'intervalEmit');
-      if (res >= 5) this.videoSubcription?.unsubscribe();
+      if (res >= 5) {
+        this.videoSubcription?.unsubscribe();
+      }
     });
   }
 }

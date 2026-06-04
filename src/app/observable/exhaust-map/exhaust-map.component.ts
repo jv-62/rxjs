@@ -16,8 +16,8 @@ export class ExhaustMapComponent implements OnInit, AfterViewInit {
   ) {}
 
   url = 'https:/global-1bb0f.firebaseio.com/exhaustMap.json';
-  num: number = 0;
-  fetching: boolean = false;
+  num = 0;
+  fetching = false;
   @ViewChild('btn') btn: ElementRef;
 
   ngOnInit(): void {}

@@ -28,8 +28,8 @@ export class TakeComponent implements OnInit {
 
     // Ex - 02 TakeLast(5)
     const source = interval(1000);
-    let condition1 = timer(5000);
-    let condition2 = fromEvent(document, 'click');
+    const condition1 = timer(5000);
+    const condition2 = fromEvent(document, 'click');
     source
       .pipe(
         map(res => 'number ' + res),

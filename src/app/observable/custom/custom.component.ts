@@ -18,14 +18,14 @@ export class CustomComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Ex - 1 Manual
-    let arr = ['Angular', 'Typescript', 'Javascript', 'Nodejs', 'Reactjs'];
-    let arr1 = ['Jayam', 'Kenil', 'Hardik', 'John', 'Doe', 'Anuj', 'Rishab', 'Nirmal'];
+    const arr = ['Angular', 'Typescript', 'Javascript', 'Nodejs', 'Reactjs'];
+    const arr1 = ['Jayam', 'Kenil', 'Hardik', 'John', 'Doe', 'Anuj', 'Rishab', 'Nirmal'];
     // for (let i = 0; i < arr.length; i++) {
     //   setTimeout(() => {
     //     observer.next(arr)
     //   }, 1000*i);
     // }
-    var subObs1 = new Observable(observer => {
+    const subObs1 = new Observable(observer => {
       setTimeout(() => {
         observer.next('Angular');
       }, 1000);
@@ -57,13 +57,15 @@ export class CustomComponent implements OnInit, OnDestroy {
       }
     );
     // Ex - 2 (Custom Interval)
-    var subObs2 = new Observable(observer => {
+    const subObs2 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
         observer.next(arr[count]);
         // if (count >= 3)
         // observer.complete();
-        if (count == 4) observer.error('Error emit');
+        if (count == 4) {
+          observer.error('Error emit');
+        }
         count++;
       }, 1000);
     });
@@ -82,13 +84,15 @@ export class CustomComponent implements OnInit, OnDestroy {
     );
     // Ex - 3 (Random names)
 
-    var subObs3 = new Observable(observer => {
+    const subObs3 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
         observer.next(arr1[count]);
         // if (count >= 4)
         //   observer.error("Error emit");
-        if (count >= 7) observer.complete();
+        if (count >= 7) {
+          observer.complete();
+        }
         count++;
       }, 1000);
     });

@@ -14,10 +14,10 @@ export class ReplaySubjectComponent implements OnInit {
   user2List = [];
   user3List = [];
 
-  methodInterval: boolean = false;
+  methodInterval = false;
 
-  subscribeMode2: boolean = false;
-  subscribeMode3: boolean = false;
+  subscribeMode2 = false;
+  subscribeMode3 = false;
 
   // Subscription
   subscription2: Subscription;

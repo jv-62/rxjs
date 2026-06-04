@@ -9,7 +9,7 @@ export class PromiseComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    let buyLaptop = new Promise((resolve, reject) => {
+    const buyLaptop = new Promise((resolve, reject) => {
       if (this.isBuyDell()) {
         return setTimeout(() => {
           resolve('Bought Dell Laptop');

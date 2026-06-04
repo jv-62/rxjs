@@ -10,8 +10,8 @@ import { delay, retryWhen, scan } from 'rxjs/operators';
 export class RetryComponent implements OnInit {
   constructor(private _http: HttpClient) {}
   users: any;
-  fetching: boolean = false;
-  status: string = 'No Data';
+  fetching = false;
+  status = 'No Data';
   ngOnInit(): void {}
 
   fetchDetails() {
@@ -29,6 +29,7 @@ export class RetryComponent implements OnInit {
               } else {
                 retryCount = retryCount + 1;
                 this.status = 'Retrying Attempt #' + retryCount;
+
                 return retryCount;
               }
             }, 0)

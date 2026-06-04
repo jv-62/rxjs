@@ -22,13 +22,13 @@ export class AppService {
   constructor(private _http: HttpClient) {}
 
   print(val: any, id: string) {
-    let el = document.createElement('li');
+    const el = document.createElement('li');
     el.innerText = val;
     document.getElementById(id)?.appendChild(el);
   }
 
   print2(val: any, id: string) {
-    let el = document.createElement('div');
+    const el = document.createElement('div');
     el.setAttribute('class', 'item');
     el.innerHTML = val;
     document.getElementById(id)?.appendChild(el);

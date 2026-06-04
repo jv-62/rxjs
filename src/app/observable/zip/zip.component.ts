@@ -42,7 +42,7 @@ export class ZipComponent implements AfterViewInit {
   }
 
   createBox(name, color, containerId) {
-    let el = document.createElement('div');
+    const el = document.createElement('div');
     el.innerText = name;
     el.setAttribute(
       'style',

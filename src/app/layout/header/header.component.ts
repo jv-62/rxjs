@@ -7,7 +7,7 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  exclusive: boolean = false;
+  exclusive = false;
   constructor(private _service: AppService) {}
 
   ngOnInit(): void {

@@ -34,8 +34,8 @@
         Status:
         <strong
           [ngClass]="{
-            'text-success': status == 'Data Fetched',
-            'text-danger': status == 'Problem Fetching Data',
+            'text-success': status === 'Data Fetched',
+            'text-danger': status === 'Problem Fetching Data',
           }"
           >{{ status }}</strong
         >
