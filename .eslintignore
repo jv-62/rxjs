@@ -1,0 +1,4 @@
+*/.spec.ts 
+polyfills.ts 
+/src/environments/* 
+/src/themes/*

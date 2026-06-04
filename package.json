@@ -6,8 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prettier-format": "prettier --config .prettierrc.json src/app/ --ignore-path .prettierignore --write",
+    "lint": "ng lint --ignore-path .eslintignore --fix"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.6",
+    "@angular-eslint/builder": "^18.4.3",
+    "@angular-eslint/eslint-plugin": "^18.4.3",
+    "@angular-eslint/eslint-plugin-template": "^18.4.3",
+    "@angular-eslint/schematics": "^18.4.3",
+    "@angular-eslint/template-parser": "^18.4.3",
     "@angular/cli": "~11.2.6",
     "@angular/compiler-cli": "~11.2.7",
     "@types/jasmine": "~3.6.0",
@@ -40,11 +46,21 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "@typescript-eslint/eslint-plugin": "7.11.0",
+    "@typescript-eslint/parser": "7.11.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^50.2.2",
+    "eslint-plugin-rxjs": "^5.0.3",
+    "eslint": "^8.57.0",
     "postcss-scss": "^4.0.9",
     "protractor": "~7.0.0",
     "sass": "^1.70.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
+    "prettier": "^3.3.3",
+    "prettier-eslint": "^16.3.0",
     "typescript": "~4.1.5"
   }
 }
