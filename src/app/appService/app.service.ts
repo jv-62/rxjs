@@ -24,17 +24,23 @@ export class AppService {
   print(val: any, id: string) {
     const el = document.createElement('li');
     el.innerText = val;
-    document.getElementById(id)?.appendChild(el);
+    const container = document.getElementById(id);
+    if (container) {
+      container.appendChild(el);
+    }
   }
 
   print2(val: any, id: string) {
     const el = document.createElement('div');
     el.setAttribute('class', 'item');
     el.innerHTML = val;
-    document.getElementById(id)?.appendChild(el);
+    const container = document.getElementById(id);
+    if (container) {
+      container.appendChild(el);
+    }
   }
 
-  getSearches(search): Observable<ISearch> {
-    return this._http.get<ISearch>(this.URL + '?q=' + search);
+  getSearches(search: string): Observable<ISearch[]> {
+    return this._http.get<ISearch[]>(this.URL + '?q=' + search);
   }
 }

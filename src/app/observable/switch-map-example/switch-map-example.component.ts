@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { debounceTime, distinctUntilChanged, filter, map, pluck, switchMap } from 'rxjs/operators';
-import { AppService, ISearch } from 'src/app/appService/app.service';
+import { debounceTime, distinctUntilChanged, filter, pluck, switchMap } from 'rxjs/operators';
+import { AppService } from 'src/app/appService/app.service';
+import { ISearch } from '../../appService/app.service';
 
 @Component({
   selector: 'app-switch-map-example',
@@ -9,27 +10,27 @@ import { AppService, ISearch } from 'src/app/appService/app.service';
   styleUrls: ['./switch-map-example.component.scss'],
 })
 export class SwitchMapExampleComponent implements AfterViewInit {
-  @ViewChild('searchForm') searchForm: NgForm;
+  @ViewChild('searchForm') searchForm?: NgForm;
 
-  searchResult: any;
-  searchResultCount: number;
+  searchResult?: ISearch[];
+  searchResultCount = 0;
   constructor(private _service: AppService) {}
-  ngAfterViewInit() {
-    const formValue = this.searchForm.valueChanges;
-    formValue
-      .pipe(
-        // map(x => x['searchTerm']),
-        // map(x => x.searchTerm),
-        filter(() => this.searchForm.valid),
-        pluck('searchTerm'),
-        debounceTime(500),
-        distinctUntilChanged(),
-        switchMap(data => this._service.getSearches(data))
-      )
-      .subscribe(res => {
-        console.log(res);
-        this.searchResult = res;
-        this.searchResultCount = Object.keys(res).length;
-      });
+  ngAfterViewInit(): void {
+    if (this.searchForm && this.searchForm.valueChanges) {
+      this.searchForm.valueChanges
+        .pipe(
+          // ensure predicate returns a strict boolean (searchForm.valid can be boolean | null)
+          filter(() => Boolean(this.searchForm && this.searchForm.valid)),
+          pluck('searchTerm'),
+          debounceTime(500),
+          distinctUntilChanged(),
+          switchMap((data: string) => this._service.getSearches(data))
+        )
+        .subscribe((res: ISearch[]) => {
+          console.log(res);
+          this.searchResult = res;
+          this.searchResultCount = Object.keys(res).length;
+        });
+    }
   }
 }

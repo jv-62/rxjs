@@ -32,13 +32,9 @@
       <br /><br />
       <p>
         Status:
-        <strong
-          [ngClass]="{
-            'text-success': status === 'Data Fetched',
-            'text-danger': status === 'Problem Fetching Data',
-          }"
-          >{{ status }}</strong
-        >
+        <strong [ngClass]="{ 'text-success': status === 'Data Fetched', 'text-danger': status === 'Problem Fetching Data' }">
+          {{ status }}
+        </strong>
         <span *ngIf="fetching" class="spinner-grow spinner-grow-sm text-warning" role="status">
           <span class="sr-only"></span>
         </span>
