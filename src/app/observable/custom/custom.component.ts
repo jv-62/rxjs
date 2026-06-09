@@ -17,79 +17,23 @@ export class CustomComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
   ngOnInit() {
-    // Ex - 1 Manual
     const arr = ['Angular', 'Typescript', 'Javascript', 'Nodejs', 'Reactjs'];
     const arr1 = ['Jayam', 'Kenil', 'Hardik', 'John', 'Doe', 'Anuj', 'Rishab', 'Nirmal'];
-    // for (let i = 0; i < arr.length; i++) {
-    //   setTimeout(() => {
-    //     observer.next(arr)
-    //   }, 1000*i);
-    // }
-    const subObs1 = new Observable(observer => {
-      setTimeout(() => {
-        observer.next('Angular');
-      }, 1000);
-      setTimeout(() => {
-        observer.next('Typescript');
-      }, 2000);
-      setTimeout(() => {
-        observer.next('Javascript');
-      }, 3000);
-      setTimeout(() => {
-        observer.next('Html and Css');
-        // observer.error("Limit exeeded");
-      }, 4000);
-      setTimeout(() => {
-        observer.next('Nodejs');
-        observer.complete();
-      }, 5000);
-    });
-    subObs1.subscribe(
-      res => {
-        // console.log(res);
-        this._service.print(res, 'manualList');
-      },
-      err => {
-        this.techStatus = 'error';
-      },
-      () => {
-        this.techStatus = 'completed';
-      }
-    );
+    // Ex - 1 Manual
+    this.manualObservable();
+
     // Ex - 2 (Custom Interval)
-    const subObs2 = new Observable(observer => {
-      let count = 0;
-      setInterval(() => {
-        observer.next(arr[count]);
-        // if (count >= 3)
-        // observer.complete();
-        if (count == 4) {
-          observer.error('Error emit');
-        }
-        count++;
-      }, 1000);
-    });
+    this.customInterval(arr);
 
-    this.subscription = subObs2.subscribe(
-      res => {
-        // console.log(res);
-        this._service.print(res, 'customList');
-      },
-      err => {
-        this.techStatus2 = 'error';
-      },
-      () => {
-        this.techStatus2 = 'completed';
-      }
-    );
     // Ex - 3 (Random names)
+    this.randomNames(arr1);
+  }
 
+  randomNames(arr1: string[]) {
     const subObs3 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
         observer.next(arr1[count]);
-        // if (count >= 4)
-        //   observer.error("Error emit");
         if (count >= 7) {
           observer.complete();
         }
@@ -106,6 +50,63 @@ export class CustomComponent implements OnInit, OnDestroy {
       },
       () => {
         this.randomStatus = 'complete';
+      }
+    );
+  }
+
+  customInterval(arr: string[]) {
+    const subObs2 = new Observable(observer => {
+      let count = 0;
+      setInterval(() => {
+        observer.next(arr[count]);
+        if (count == 4) {
+          observer.error('Error emit');
+        }
+        count++;
+      }, 1000);
+    });
+
+    this.subscription = subObs2.subscribe(
+      res => {
+        this._service.print(res, 'customList');
+      },
+      err => {
+        this.techStatus2 = 'error';
+      },
+      () => {
+        this.techStatus2 = 'completed';
+      }
+    );
+  }
+
+  manualObservable() {
+    const subObs1 = new Observable(observer => {
+      setTimeout(() => {
+        observer.next('Angular');
+      }, 1000);
+      setTimeout(() => {
+        observer.next('Typescript');
+      }, 2000);
+      setTimeout(() => {
+        observer.next('Javascript');
+      }, 3000);
+      setTimeout(() => {
+        observer.next('Html and Css');
+      }, 4000);
+      setTimeout(() => {
+        observer.next('Nodejs');
+        observer.complete();
+      }, 5000);
+    });
+    subObs1.subscribe(
+      res => {
+        this._service.print(res, 'manualList');
+      },
+      err => {
+        this.techStatus = 'error';
+      },
+      () => {
+        this.techStatus = 'completed';
       }
     );
   }
