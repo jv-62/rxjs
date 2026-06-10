@@ -9,11 +9,12 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./tap.component.scss'],
 })
 export class TapComponent implements OnInit {
-  constructor(private _service: AppService) {}
-
   obs: Subscription;
   obs2: Subscription;
   myColor;
+
+  constructor(private _service: AppService) {}
+
   ngOnInit(): void {
     const source = interval(1000);
 
@@ -22,7 +23,7 @@ export class TapComponent implements OnInit {
     this.obs = source
       .pipe(
         tap(res => {
-          if (res == arr.length) {
+          if (res === arr.length) {
             this.obs.unsubscribe();
           }
         }),
@@ -32,15 +33,15 @@ export class TapComponent implements OnInit {
         console.log(res);
         this._service.print(res, 'elContainer');
       });
-    const colour = ['Red', 'Green', 'Blue', 'Orange', 'Yellow', 'Purple', 'Violet'];
+    const color = ['Red', 'Green', 'Blue', 'Orange', 'Yellow', 'Purple', 'Violet'];
     this.obs2 = source
       .pipe(
         tap(res => {
-          if (res == colour.length) {
+          if (res === color.length) {
             this.obs2.unsubscribe();
           }
         }),
-        map(res => colour[res])
+        map(res => color[res])
       )
       .subscribe(res => {
         console.log(res);

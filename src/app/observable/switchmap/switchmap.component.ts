@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { from, of } from 'rxjs';
-import { concatMap, delay, map, mergeAll, mergeMap, switchAll, switchMap } from 'rxjs/operators';
+import { from, Observable, of } from 'rxjs';
+import { concatMap, delay, mergeMap, switchMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
 
 @Component({
@@ -30,7 +30,7 @@ export class SwitchmapComponent implements OnInit {
     });
   }
 
-  getData(data) {
+  getData(data): Observable<string> {
     return of(data + ' Video Uploaded').pipe(delay(1000));
   }
 }

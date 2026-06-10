@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, fromEvent, interval, timer } from 'rxjs';
+import { from, interval, timer } from 'rxjs';
 import { map, take, takeLast, takeUntil } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -9,8 +9,9 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./take.component.scss'],
 })
 export class TakeComponent implements OnInit {
-  constructor(private _service: AppService) {}
   namesArray = ['Jayam', 'Typescript', 'Javascript', 'Nodejs', 'Rxjs', 'Laptop'];
+
+  constructor(private _service: AppService) {}
   ngOnInit(): void {
     const nameSource = from(this.namesArray);
 
@@ -29,7 +30,7 @@ export class TakeComponent implements OnInit {
     // Ex - 02 TakeLast(5)
     const source = interval(1000);
     const condition1 = timer(5000);
-    const condition2 = fromEvent(document, 'click');
+
     source
       .pipe(
         map(res => 'number ' + res),

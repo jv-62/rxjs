@@ -8,12 +8,13 @@ import { take, toArray } from 'rxjs/operators';
   styleUrls: ['./to-array.component.scss'],
 })
 export class ToArrayComponent implements OnInit {
-  constructor() {}
   users = [
     { name: 'Jayam', language: 'Javascript' },
     { name: 'Kenil', language: 'Meteor' },
     { name: 'Hardik', language: 'Nodejs' },
   ];
+
+  constructor() {}
   ngOnInit(): void {
     // Ex :- 1
     const source = interval(1000);
