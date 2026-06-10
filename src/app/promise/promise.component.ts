@@ -33,10 +33,10 @@ export class PromiseComponent implements OnInit {
       });
   }
 
-  isBuyDell() {
+  isBuyDell(): boolean {
     return false;
   }
-  isBuyLenovo() {
+  isBuyLenovo(): boolean {
     return false;
   }
 }

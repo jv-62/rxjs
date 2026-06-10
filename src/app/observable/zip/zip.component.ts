@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { forkJoin, fromEvent, zip } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
@@ -8,23 +8,23 @@ import { map, take } from 'rxjs/operators';
   styleUrls: ['./zip.component.scss'],
 })
 export class ZipComponent implements AfterViewInit {
+  // Template Reference
+  @ViewChild('name') name: ElementRef<HTMLInputElement>;
+  @ViewChild('color') color: ElementRef<HTMLInputElement>;
+
   nameSource = ['Jayam', 'Kenil', 'Manoj', 'Hozefa', 'Vishal', 'Kishan', 'Hardik'];
   colorSource = ['Red', 'Purple', 'Pink', 'Yellow', 'Green', 'Orange', 'Blue'];
 
-  // Template Reference
-  @ViewChild('name') name: ElementRef;
-  @ViewChild('color') color: ElementRef;
-
   constructor() {}
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     // Observables
-    const nameObs = fromEvent<any>(this.name.nativeElement, 'change').pipe(
-      map(event => event.target.value),
+    const nameObs = fromEvent<Event>(this.name.nativeElement, 'change').pipe(
+      map(event => (event.target as HTMLInputElement).value),
       take(4)
     );
-    const colorObs = fromEvent<any>(this.color.nativeElement, 'change').pipe(
-      map(event => event.target.value),
+    const colorObs = fromEvent<Event>(this.color.nativeElement, 'change').pipe(
+      map(event => (event.target as HTMLInputElement).value),
       take(3)
     );
 
@@ -41,7 +41,7 @@ export class ZipComponent implements AfterViewInit {
     });
   }
 
-  createBox(name, color, containerId) {
+  createBox(name: string, color: string, containerId: string): void {
     const el = document.createElement('div');
     el.innerText = name;
     el.setAttribute(
