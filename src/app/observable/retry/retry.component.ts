@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 import { delay, retryWhen, scan } from 'rxjs/operators';
 
 @Component({
@@ -7,14 +7,13 @@ import { delay, retryWhen, scan } from 'rxjs/operators';
   templateUrl: './retry.component.html',
   styleUrls: ['./retry.component.scss'],
 })
-export class RetryComponent implements OnInit {
-  constructor(private _http: HttpClient) {}
+export class RetryComponent {
   users: any;
   fetching = false;
   status = 'No Data';
-  ngOnInit(): void {}
+  constructor(private _http: HttpClient) {}
 
-  fetchDetails() {
+  fetchDetails(): void {
     this.fetching = true;
     this.status = 'Fetching data...';
     this._http

@@ -8,6 +8,7 @@ import { AppService } from 'src/app/appService/app.service';
 })
 export class SubjectComponent implements OnInit, OnDestroy {
   userName: string;
+
   constructor(private _service: AppService) {}
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
     this._service.exclusive.next(true);
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this._service.exclusive.next(false);
   }
 }

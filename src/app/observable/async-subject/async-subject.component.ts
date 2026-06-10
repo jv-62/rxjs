@@ -7,8 +7,8 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./async-subject.component.scss'],
 })
 export class AsyncSubjectComponent implements OnInit {
-  constructor(private _service: AppService) {}
   asyncVideoEmit: any;
+  constructor(private _service: AppService) {}
 
   ngOnInit(): void {
     this._service.asyncVideoEmit.subscribe(res => {
@@ -16,12 +16,12 @@ export class AsyncSubjectComponent implements OnInit {
     });
   }
 
-  onVideoAdd(video) {
+  onVideoAdd(video): void {
     console.log('video', video);
     this._service.asyncVideoEmit.next(video);
   }
 
-  onComplete() {
+  onComplete(): void {
     this._service.asyncVideoEmit.complete();
   }
 }

@@ -17,22 +17,10 @@ export class ShareReplayComponent implements OnInit {
   constructor(private _http: HttpClient) {}
 
   ngOnInit(): void {
-    this.allProducts = this._http.get(this.url).pipe(shareReplay());
+    this.allProducts = this._http.get(this.url).pipe(shareReplay({ bufferSize: 1, refCount: true }));
 
-    this.moblies = this.allProducts.pipe(
-      map(res => {
-        res.filter(mobileData => {
-          return mobileData['type'] == 'mobile';
-        });
-      })
-    );
+    this.moblies = this.allProducts.pipe(map((res: any[]) => res.filter(mobileData => mobileData['type'] === 'mobile')));
 
-    this.laptops = this.allProducts.pipe(
-      map(res => {
-        res.filter(mobileData => {
-          return mobileData['type'] == 'pc';
-        });
-      })
-    );
+    this.laptops = this.allProducts.pipe(map((res: any[]) => res.filter(mobileData => mobileData['type'] === 'pc')));
   }
 }
