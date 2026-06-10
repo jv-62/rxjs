@@ -8,15 +8,15 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./custom.component.scss'],
 })
 export class CustomComponent implements OnInit, OnDestroy {
-  constructor(private _service: AppService) {}
-
   techStatus = '';
   techStatus2 = '';
   name;
   randomStatus;
   subscription: Subscription;
 
-  ngOnInit() {
+  constructor(private _service: AppService) {}
+
+  ngOnInit(): void {
     const arr = ['Angular', 'Typescript', 'Javascript', 'Nodejs', 'Reactjs'];
     const arr1 = ['Jayam', 'Kenil', 'Hardik', 'John', 'Doe', 'Anuj', 'Rishab', 'Nirmal'];
     // Ex - 1 Manual
@@ -29,7 +29,7 @@ export class CustomComponent implements OnInit, OnDestroy {
     this.randomNames(arr1);
   }
 
-  randomNames(arr1: string[]) {
+  randomNames(arr1: string[]): void {
     const subObs3 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
@@ -45,7 +45,7 @@ export class CustomComponent implements OnInit, OnDestroy {
         console.log('Res => ', res);
         this.name = res;
       },
-      err => {
+      () => {
         this.randomStatus = 'error';
       },
       () => {
@@ -54,12 +54,12 @@ export class CustomComponent implements OnInit, OnDestroy {
     );
   }
 
-  customInterval(arr: string[]) {
+  customInterval(arr: string[]): void {
     const subObs2 = new Observable(observer => {
       let count = 0;
       setInterval(() => {
         observer.next(arr[count]);
-        if (count == 4) {
+        if (count === 4) {
           observer.error('Error emit');
         }
         count++;
@@ -70,7 +70,7 @@ export class CustomComponent implements OnInit, OnDestroy {
       res => {
         this._service.print(res, 'customList');
       },
-      err => {
+      () => {
         this.techStatus2 = 'error';
       },
       () => {
@@ -79,7 +79,7 @@ export class CustomComponent implements OnInit, OnDestroy {
     );
   }
 
-  manualObservable() {
+  manualObservable(): void {
     const subObs1 = new Observable(observer => {
       setTimeout(() => {
         observer.next('Angular');
@@ -102,7 +102,7 @@ export class CustomComponent implements OnInit, OnDestroy {
       res => {
         this._service.print(res, 'manualList');
       },
-      err => {
+      () => {
         this.techStatus = 'error';
       },
       () => {
@@ -111,7 +111,7 @@ export class CustomComponent implements OnInit, OnDestroy {
     );
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 }
