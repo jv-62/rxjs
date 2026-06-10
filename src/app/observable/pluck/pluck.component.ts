@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
-import { map, pluck, toArray } from 'rxjs/operators';
+import { pluck, toArray } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pluck',
@@ -8,7 +8,6 @@ import { map, pluck, toArray } from 'rxjs/operators';
   styleUrls: ['./pluck.component.scss'],
 })
 export class PluckComponent implements OnInit {
-  constructor() {}
   data;
   data2;
   users = [
@@ -18,6 +17,8 @@ export class PluckComponent implements OnInit {
     { name: 'Raju', skills: 'PHP', job: { title: 'Javascript Developer', exp: '1 Years' } },
     { name: 'Rajesh', skills: 'Nodejs', job: { title: 'Java Developer', exp: '7 Years' } },
   ];
+
+  constructor() {}
 
   ngOnInit(): void {
     // Ex - 01

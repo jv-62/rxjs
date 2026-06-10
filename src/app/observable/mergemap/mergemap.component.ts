@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, of } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
 import { map, mergeAll, mergeMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -37,7 +37,7 @@ export class MergemapComponent implements OnInit {
     });
   }
 
-  getData(data) {
+  getData(data): Observable<string> {
     return of(data + ' Video Uploaded');
   }
 }

@@ -8,8 +8,6 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./replay-subject.component.scss'],
 })
 export class ReplaySubjectComponent implements OnInit {
-  constructor(private _service: AppService) {}
-
   user1List = ['Angular 8', 'Angular 9'];
   user2List = [];
   user3List = [];
@@ -24,17 +22,18 @@ export class ReplaySubjectComponent implements OnInit {
   subscription3: Subscription;
   videSubscription: Subscription;
 
+  constructor(private _service: AppService) {}
   ngOnInit(): void {
     this._service.videoEmit.subscribe(res => {
       this.user1List.push(res);
     });
   }
 
-  onVideoAdd(video) {
+  onVideoAdd(video: string): void {
     this._service.videoEmit.next(video);
   }
 
-  user2Subscribe() {
+  user2Subscribe(): void {
     if (this.subscribeMode2) {
       this.subscription2.unsubscribe();
     } else {
@@ -44,7 +43,7 @@ export class ReplaySubjectComponent implements OnInit {
     }
     this.subscribeMode2 = !this.subscribeMode2;
   }
-  user3Subscribe() {
+  user3Subscribe(): void {
     if (this.subscribeMode3) {
       this.subscription3.unsubscribe();
     } else {
@@ -55,7 +54,7 @@ export class ReplaySubjectComponent implements OnInit {
     this.subscribeMode3 = !this.subscribeMode3;
   }
 
-  toggleMethod() {
+  toggleMethod(): void {
     if (this.methodInterval) {
       this.videSubscription.unsubscribe();
     } else {
