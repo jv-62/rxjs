@@ -7,9 +7,11 @@
       <strong>Names</strong>
       <hr />
       <select class="form-select" aria-label="Default select example" #name>
-        <option *ngFor="let item of nameSource" value="{{ item }}">
-          {{ item }}
-        </option>
+        @for (item of nameSource; track $index) {
+          <option value="{{ item }}">
+            {{ item }}
+          </option>
+        }
       </select>
       <br />
       <br />
@@ -17,9 +19,11 @@
       <strong>Colors</strong>
       <hr />
       <select class="form-select" aria-label="Default select example" #color>
-        <option *ngFor="let item of colorSource" value="{{ item }}">
-          {{ item }}
-        </option>
+        @for (item of colorSource; track $index) {
+          <option value="{{ item }}">
+            {{ item }}
+          </option>
+        }
       </select>
     </div>
     <div class="col-md-9 sl-auto">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AppService } from 'src/app/appService/app.service';
 
 @Component({
@@ -7,21 +7,23 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./async-subject.component.scss'],
 })
 export class AsyncSubjectComponent implements OnInit {
-  asyncVideoEmit: any;
-  constructor(private _service: AppService) {}
+  asyncVideoEmit: string;
+  appService = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
-    this._service.asyncVideoEmit.subscribe(res => {
+    this.appService.asyncVideoEmit.subscribe((res: string) => {
       this.asyncVideoEmit = res;
     });
   }
 
-  onVideoAdd(video): void {
+  onVideoAdd(video: string): void {
     console.log('video', video);
-    this._service.asyncVideoEmit.next(video);
+    this.appService.asyncVideoEmit.next(video);
   }
 
   onComplete(): void {
-    this._service.asyncVideoEmit.complete();
+    this.appService.asyncVideoEmit.complete();
   }
 }

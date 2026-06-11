@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AppService } from 'src/app/appService/app.service';
 
 @Component({
@@ -8,10 +8,12 @@ import { AppService } from 'src/app/appService/app.service';
 })
 export class HeaderComponent implements OnInit {
   exclusive = false;
-  constructor(private _service: AppService) {}
+  appService = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
-    this._service.exclusive.subscribe(res => {
+    this.appService.exclusive.subscribe(res => {
       this.exclusive = res;
     });
   }

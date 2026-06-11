@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
 export interface ISearch {
@@ -16,12 +16,13 @@ export class AppService {
   userName = new BehaviorSubject<string>('Jayam');
   videoEmit = new ReplaySubject<string>(2, 5000);
   asyncVideoEmit = new AsyncSubject();
+  http = inject(HttpClient);
 
   URL = 'https://my-json-server.typicode.com/Uxtrendz/apis/videoList';
 
-  constructor(private _http: HttpClient) {}
+  constructor() {}
 
-  print(val: any, id: string) {
+  print(val: string, id: string): void {
     const el = document.createElement('li');
     el.innerText = val;
     const container = document.getElementById(id);
@@ -30,7 +31,7 @@ export class AppService {
     }
   }
 
-  print2(val: any, id: string) {
+  print2(val: string, id: string): void {
     const el = document.createElement('div');
     el.setAttribute('class', 'item');
     el.innerHTML = val;
@@ -41,6 +42,6 @@ export class AppService {
   }
 
   getSearches(search: string): Observable<ISearch[]> {
-    return this._http.get<ISearch[]>(this.URL + '?q=' + search);
+    return this.http.get<ISearch[]>(this.URL + '?q=' + search);
   }
 }
