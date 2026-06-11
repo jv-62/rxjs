@@ -8,6 +8,7 @@ import { AppService } from 'src/app/appService/app.service';
 })
 export class Comp3Component implements OnInit {
   userName: string;
+
   constructor(private _service: AppService) {}
 
   ngOnInit(): void {
@@ -15,7 +16,7 @@ export class Comp3Component implements OnInit {
       this.userName = res;
     });
   }
-  updateUserName(uName) {
+  updateUserName(uName: HTMLInputElement): void {
     this._service.userName.next(uName.value);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { concat, interval } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -9,7 +9,9 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./concat.component.scss'],
 })
 export class ConcatComponent implements OnInit {
-  constructor(private _service: AppService) {}
+  appService = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
     const sourceTech = interval(1000).pipe(
@@ -27,7 +29,7 @@ export class ConcatComponent implements OnInit {
     const finalObs = concat(sourceTech, sourceComedy, sourceNews);
     finalObs.subscribe(res => {
       console.log(res);
-      this._service.print(res, 'ulContainer');
+      this.appService.print(res, 'ulContainer');
     });
   }
 }

@@ -7,15 +7,17 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./comp1.component.scss'],
 })
 export class Comp1Component implements OnInit {
-  constructor(private _service: AppService) {}
   userName: string;
+
+  constructor(private _service: AppService) {}
+
   ngOnInit(): void {
     this._service.userName.subscribe(res => {
       this.userName = res;
     });
   }
 
-  updateUserName(uName) {
+  updateUserName(uName: HTMLInputElement): void {
     this._service.userName.next(uName.value);
   }
 }

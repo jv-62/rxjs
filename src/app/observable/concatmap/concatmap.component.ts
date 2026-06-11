@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, of } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
 import { concatMap, delay, map, mergeMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -40,7 +40,7 @@ export class ConcatmapComponent implements OnInit {
     });
   }
 
-  getData(data) {
+  getData(data: string): Observable<string> {
     return of(data + ' Video Uploaded').pipe(delay(1000));
   }
 }
