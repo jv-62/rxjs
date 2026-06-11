@@ -24,14 +24,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let video of searchResult; let i = index">
-          <th scope="row">{{ i + 1 }}</th>
-          <td><img [src]="video.thumb" width="120" /></td>
-          <td>
-            <strong>{{ video.title }}</strong>
-            <p>{{ video.description }}</p>
-          </td>
-        </tr>
+        @for (video of searchResults; track $index) {
+          <tr>
+            <th scope="row">{{ $index + 1 }}</th>
+            <td><img [src]="video.thumb" width="120" /></td>
+            <td>
+              <strong>{{ video.title }}</strong>
+              <p>{{ video.description }}</p>
+            </td>
+          </tr>
+        }
       </tbody>
     </table>
   </div>

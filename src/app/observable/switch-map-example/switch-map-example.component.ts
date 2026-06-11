@@ -12,7 +12,7 @@ import { ISearch } from '../../appService/app.service';
 export class SwitchMapExampleComponent implements AfterViewInit {
   @ViewChild('searchForm') searchForm?: NgForm;
 
-  searchResult?: ISearch[];
+  searchResults?: ISearch[];
   searchResultCount = 0;
   constructor(private _service: AppService) {}
   ngAfterViewInit(): void {
@@ -28,7 +28,7 @@ export class SwitchMapExampleComponent implements AfterViewInit {
         )
         .subscribe((res: ISearch[]) => {
           console.log(res);
-          this.searchResult = res;
+          this.searchResults = res;
           this.searchResultCount = Object.keys(res).length;
         });
     }

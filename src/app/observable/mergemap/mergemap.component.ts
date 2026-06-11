@@ -37,7 +37,7 @@ export class MergemapComponent implements OnInit {
     });
   }
 
-  getData(data): Observable<string> {
+  getData(data: string): Observable<string> {
     return of(data + ' Video Uploaded');
   }
 }
