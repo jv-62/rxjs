@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AppService } from 'src/app/appService/app.service';
 
 @Component({
@@ -8,16 +8,17 @@ import { AppService } from 'src/app/appService/app.service';
 })
 export class Comp1Component implements OnInit {
   userName: string;
+  appService = inject(AppService);
 
-  constructor(private _service: AppService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this._service.userName.subscribe(res => {
+    this.appService.userName.subscribe(res => {
       this.userName = res;
     });
   }
 
   updateUserName(uName: HTMLInputElement): void {
-    this._service.userName.next(uName.value);
+    this.appService.userName.next(uName.value);
   }
 }

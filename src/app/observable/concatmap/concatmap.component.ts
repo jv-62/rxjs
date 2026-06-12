@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { from, Observable, of } from 'rxjs';
 import { concatMap, delay, map, mergeMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -9,7 +9,8 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./concatmap.component.scss'],
 })
 export class ConcatmapComponent implements OnInit {
-  constructor(private _service: AppService) {}
+  appService = inject(AppService);
+  constructor() {}
 
   ngOnInit(): void {
     const source = from(['Tech', 'Comedy', 'News']);
@@ -17,13 +18,13 @@ export class ConcatmapComponent implements OnInit {
     source.pipe(map(x => this.getData(x))).subscribe(res =>
       res.subscribe(response => {
         console.log(response);
-        this._service.print(response, 'elContainer');
+        this.appService.print(response, 'elContainer');
       })
     );
     // Ex - 2 | MergeMap
     source.pipe(mergeMap(x => this.getData(x))).subscribe(response => {
       console.log(response);
-      this._service.print(response, 'elContainer1');
+      this.appService.print(response, 'elContainer1');
     });
     // Ex - 2 | Map + ConcatAll
     // source.pipe(
@@ -31,12 +32,12 @@ export class ConcatmapComponent implements OnInit {
     //   concatAll()
     // ).subscribe(response => {
     //   console.log(response);
-    //   this._service.print(response, 'elContainer1');
+    //   this.appService.print(response, 'elContainer1');
     // })
     // Ex - 3 | ConcatMap
     source.pipe(concatMap(x => this.getData(x))).subscribe(response => {
       console.log(response);
-      this._service.print(response, 'elContainer2');
+      this.appService.print(response, 'elContainer2');
     });
   }
 

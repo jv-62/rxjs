@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { combineLatest, fromEvent } from 'rxjs';
-import { map, pluck, withLatestFrom } from 'rxjs/operators';
+import { map, withLatestFrom } from 'rxjs/operators';
 
 @Component({
   selector: 'app-combine-latest',
@@ -9,8 +9,8 @@ import { map, pluck, withLatestFrom } from 'rxjs/operators';
 })
 export class CombineLatestComponent implements AfterViewInit {
   // Template Reference
-  @ViewChild('name') name: ElementRef;
-  @ViewChild('color') color: ElementRef;
+  @ViewChild('name') name: ElementRef<HTMLSelectElement>;
+  @ViewChild('color') color: ElementRef<HTMLSelectElement>;
 
   nameSource = ['Jayam', 'Kenil', 'Manoj', 'Hozefa', 'Vishal', 'Kishan', 'Hardik'];
   colorSource = ['Red', 'Purple', 'Pink', 'Yellow', 'Green', 'Orange', 'Blue'];
@@ -19,8 +19,12 @@ export class CombineLatestComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // Observable
-    const nameObs = fromEvent<any>(this.name.nativeElement, 'change').pipe(map(event => event.target.value));
-    const colorObs = fromEvent<any>(this.color.nativeElement, 'change').pipe(pluck('target', 'value'));
+    const nameObs = fromEvent<Event>(this.name.nativeElement, 'change').pipe(
+      map((event: Event) => (event.target as HTMLSelectElement).value)
+    );
+    const colorObs = fromEvent<Event>(this.color.nativeElement, 'change').pipe(
+      map((event: Event) => (event.target as HTMLSelectElement).value)
+    );
 
     // Ex :- 01 CombineLatest
     combineLatest(nameObs, colorObs).subscribe(([name, color]: [string, string]) => {
