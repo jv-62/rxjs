@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { from, of } from 'rxjs';
+import { Component, inject, OnInit } from '@angular/core';
+import { from, Observable, of } from 'rxjs';
 import { concatMap, delay } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -9,7 +9,7 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./concatmap2.component.scss'],
 })
 export class Concatmap2Component implements OnInit {
-  constructor(private _service: AppService) {}
+  appService = inject(AppService);
   notifyData = [
     {
       name: 'Facebook',
@@ -44,15 +44,17 @@ export class Concatmap2Component implements OnInit {
       p: 'Twitted : Lorem ipsum sdkjsd jshd kshdfhsdjkf',
     },
   ];
-  ngOnInit() {
+
+  constructor() {}
+  ngOnInit(): void {
     from(this.notifyData)
       .pipe(concatMap(res => this.getHtml(res)))
       .subscribe(res => {
         console.log(res);
-        this._service.print2(res, 'elContainer');
+        this.appService.print2(res, 'elContainer');
       });
   }
-  getHtml(data) {
+  getHtml(data: { name: string; icon: string; time: string; img: string; strong: string; p: string }): Observable<string> {
     return of(`
       <div class="header">
           <div class="app">

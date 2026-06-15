@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -13,8 +13,9 @@ export class CustomComponent implements OnInit, OnDestroy {
   name;
   randomStatus;
   subscription: Subscription;
+  appService = inject(AppService);
 
-  constructor(private _service: AppService) {}
+  constructor() {}
 
   ngOnInit(): void {
     const arr = ['Angular', 'Typescript', 'Javascript', 'Nodejs', 'Reactjs'];
@@ -67,8 +68,8 @@ export class CustomComponent implements OnInit, OnDestroy {
     });
 
     this.subscription = subObs2.subscribe(
-      res => {
-        this._service.print(res, 'customList');
+      (res: string) => {
+        this.appService.print(res, 'customList');
       },
       () => {
         this.techStatus2 = 'error';
@@ -99,8 +100,8 @@ export class CustomComponent implements OnInit, OnDestroy {
       }, 5000);
     });
     subObs1.subscribe(
-      res => {
-        this._service.print(res, 'manualList');
+      (res: string) => {
+        this.appService.print(res, 'manualList');
       },
       () => {
         this.techStatus = 'error';

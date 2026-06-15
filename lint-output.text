@@ -1,0 +1,314 @@
+
+Linting "RxjsSeries"...
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/app-routing.module.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/app.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/app.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/app.module.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/appService/app.service.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/layout/header/header.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/layout/header/header.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/all/all.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/all/all.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/async-subject/async-subject.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/async-subject/async-subject.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/combine-latest/combine-latest.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/combine-latest/combine-latest.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/comp/comp1/comp1.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/comp/comp1/comp1.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/comp/comp2/comp2.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/comp/comp2/comp2.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/comp/comp3/comp3.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/comp/comp3/comp3.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/concat/concat.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/concat/concat.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/concatmap/concatmap.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/concatmap/concatmap.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/concatmap2/concatmap2.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/concatmap2/concatmap2.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/custom/custom.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/custom/custom.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/debounce-time/debounce-time.component.html
+  13:16  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+  13:22  error  Expected `!==` but received `!=`                     @angular-eslint/template/eqeqeq
+  26:16  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+  26:22  error  Expected `!==` but received `!=`                     @angular-eslint/template/eqeqeq
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/debounce-time/debounce-time.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/debounce-time/debounce-time.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  14:3   error  Member myInput2 should be declared before all public instance field definitions                                                                                         @typescript-eslint/member-ordering
+  17:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  19:3   error  Lifecycle methods should not be empty                                                                                                                                   @angular-eslint/no-empty-lifecycle-method
+  21:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-function-return-type
+  21:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+  23:34  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  23:39  error  Unsafe argument of type `any` assigned to a parameter of type `HasEventTargetAddRemove<any> | ArrayLike<HasEventTargetAddRemove<any>>`                                  @typescript-eslint/no-unsafe-argument
+  39:35  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  39:40  error  Unsafe argument of type `any` assigned to a parameter of type `HasEventTargetAddRemove<any> | ArrayLike<HasEventTargetAddRemove<any>>`                                  @typescript-eslint/no-unsafe-argument
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/exhaust-map/exhaust-map.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/exhaust-map/exhaust-map.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  14:5   error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  15:5   error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  18:3   error  Member url should be declared before all public constructor definitions                                                                                                 @typescript-eslint/member-ordering
+  19:3   error  Member num should be declared before all public constructor definitions                                                                                                 @typescript-eslint/member-ordering
+  20:3   error  Member fetching should be declared before all public constructor definitions                                                                                            @typescript-eslint/member-ordering
+  21:3   error  Member btn should be declared before all public constructor definitions                                                                                                 @typescript-eslint/member-ordering
+  23:3   error  Lifecycle methods should not be empty                                                                                                                                   @angular-eslint/no-empty-lifecycle-method
+  25:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-function-return-type
+  25:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+  26:15  error  Unsafe argument of type `any` assigned to a parameter of type `HasEventTargetAddRemove<unknown> | ArrayLike<HasEventTargetAddRemove<unknown>>`                          @typescript-eslint/no-unsafe-argument
+  37:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-function-return-type
+  37:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+  44:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-function-return-type
+  44:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+  44:10  error  Argument 'changes' should be typed                                                                                                                                      @typescript-eslint/explicit-module-boundary-types
+  48:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-function-return-type
+  48:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+  49:20  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/filter/filter.component.html
+  15:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+  32:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+  49:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/filter/filter.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/filter/filter.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+  39:36  error  Expected '===' and instead saw '=='                                            eqeqeq
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/from-event/from-event.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/from-event/from-event.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  11:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  13:3   error  Member addVideoBtn should be declared before all public constructor definitions                                                                                         @typescript-eslint/member-ordering
+  15:3   error  Lifecycle methods should not be empty                                                                                                                                   @angular-eslint/no-empty-lifecycle-method
+  17:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-function-return-type
+  17:3   error  Missing return type on function                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+  20:17  error  Unsafe argument of type `any` assigned to a parameter of type `HasEventTargetAddRemove<unknown> | ArrayLike<HasEventTargetAddRemove<unknown>>`                          @typescript-eslint/no-unsafe-argument
+  20:68  error  'res' is defined but never used. Allowed unused args must match /^_/u                                                                                                   no-unused-vars
+  20:68  error  'res' is defined but never used                                                                                                                                         @typescript-eslint/no-unused-vars
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/interval/interval.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/interval/interval.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  13:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/map/map.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/map/map.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  18:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/merge/merge.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/merge/merge.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  11:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/mergemap/mergemap.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/mergemap/mergemap.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  12:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/observable.component.html
+  7:35  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/observable.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/observable.component.ts
+   1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  17:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  18:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/of-from/of-from.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/of-from/of-from.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  11:11  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  13:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/pluck/pluck.component.html
+  14:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+  28:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/pluck/pluck.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/pluck/pluck.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/replay-subject/replay-subject.component.html
+  13:9   error  Use built-in control flow instead of directive ngIf     @angular-eslint/template/prefer-control-flow
+  21:8   error  Use built-in control flow instead of directive ngIf     @angular-eslint/template/prefer-control-flow
+  27:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+  34:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+  44:30  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/replay-subject/replay-subject.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/replay-subject/replay-subject.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  25:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/retry/retry.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/retry/retry.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  11:10  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  14:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/share-replay/share-replay.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/share-replay/share-replay.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  13:27  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  14:23  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  15:23  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  17:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  22:52  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  24:52  error  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/subject/subject.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/subject/subject.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  12:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/switch-map-example/switch-map-example.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/switch-map-example/switch-map-example.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  17:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/switchmap/switchmap.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/switchmap/switchmap.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  12:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  33:11  error  Argument 'data' should be typed                                                                                                                                         @typescript-eslint/explicit-module-boundary-types
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/take/take.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/take/take.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  14:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/tap/tap.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/tap/tap.component.ts
+   1:1   error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found                                                                                           @angular-eslint/no-host-metadata-property
+  16:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/to-array/to-array.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/to-array/to-array.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/zip/zip.component.html
+  10:34  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+  18:34  error  Use built-in control flow instead of directive ngForOf  @angular-eslint/template/prefer-control-flow
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/zip/zip.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/observable/zip/zip.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/promise/promise.component.spec.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/app/promise/promise.component.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/main.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+/Users/jayamverma/Documents/Jayam/Projects/Github/rxjs/src/test.ts
+  1:1  error  Definition for rule '@angular-eslint/no-host-metadata-property' was not found  @angular-eslint/no-host-metadata-property
+
+✖ 149 problems (149 errors, 0 warnings)
+
+Lint errors found in the listed files.
+
