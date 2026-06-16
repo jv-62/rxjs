@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -10,7 +10,9 @@ import { AppService } from 'src/app/appService/app.service';
 export class IntervalComponent implements OnInit {
   obsMsg?: string;
   videoSubscription?: Subscription;
-  constructor(private _service: AppService) {}
+  _service = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
     // const broadCastVideos = interval(1000);

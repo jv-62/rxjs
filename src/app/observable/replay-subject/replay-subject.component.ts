@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -21,8 +21,9 @@ export class ReplaySubjectComponent implements OnInit {
   subscription2: Subscription;
   subscription3: Subscription;
   videSubscription: Subscription;
+  _service = inject(AppService);
 
-  constructor(private _service: AppService) {}
+  constructor() {}
   ngOnInit(): void {
     this._service.videoEmit.subscribe(res => {
       this.user1List.push(res);

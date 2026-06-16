@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
@@ -11,12 +11,11 @@ import { filter, takeUntil } from 'rxjs/operators';
 })
 export class ObservableComponent implements OnInit, OnDestroy {
   showBackButton = false;
+  router = inject(Router);
+  location = inject(Location);
   private destroy$ = new Subject<void>();
 
-  constructor(
-    private router: Router,
-    private location: Location
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.updateBackButton(this.router.url);

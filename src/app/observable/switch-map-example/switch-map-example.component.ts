@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, filter, pluck, switchMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -14,7 +14,9 @@ export class SwitchMapExampleComponent implements AfterViewInit {
 
   searchResults?: ISearch[];
   searchResultCount = 0;
-  constructor(private _service: AppService) {}
+  _service = inject(AppService);
+
+  constructor() {}
   ngAfterViewInit(): void {
     if (this.searchForm && this.searchForm.valueChanges) {
       this.searchForm.valueChanges

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { from, interval, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -15,7 +15,9 @@ export class MapComponent implements OnInit {
   // Messages
   msg1;
   msg2;
-  constructor(private _service: AppService) {}
+  _service = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
     const broadcastVideos = interval(1000);

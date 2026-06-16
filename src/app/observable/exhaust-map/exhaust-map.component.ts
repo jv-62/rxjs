@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { fromEvent } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { fromEvent, Observable } from 'rxjs';
 import { exhaustMap, tap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -9,20 +9,17 @@ import { AppService } from 'src/app/appService/app.service';
   templateUrl: './exhaust-map.component.html',
   styleUrls: ['./exhaust-map.component.scss'],
 })
-export class ExhaustMapComponent implements OnInit, AfterViewInit {
-  constructor(
-    private _service: AppService,
-    private _http: HttpClient
-  ) {}
-
+export class ExhaustMapComponent implements AfterViewInit {
+  @ViewChild('btn') btn: ElementRef<HTMLInputElement>;
   url = 'https:/global-1bb0f.firebaseio.com/exhaustMap.json';
   num = 0;
   fetching = false;
-  @ViewChild('btn') btn: ElementRef;
+  _service = inject(AppService);
+  _http = inject(HttpClient);
 
-  ngOnInit(): void {}
+  constructor() {}
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     fromEvent(this.btn.nativeElement, 'click')
       .pipe(
         tap(() => (this.fetching = true)),
@@ -34,19 +31,19 @@ export class ExhaustMapComponent implements OnInit, AfterViewInit {
       });
   }
 
-  onButtonClick() {
+  onButtonClick(): void {
     this.num++;
     this.onSave(this.num).subscribe(res => {
       console.log(res);
     });
   }
 
-  onSave(changes) {
+  onSave(changes: number): Observable<unknown> {
     return this._http.put(this.url, { data: changes });
   }
 
-  onFetch() {
-    this._http.get<any>(this.url).subscribe(res => {
+  onFetch(): void {
+    this._http.get<{ data: number }>(this.url).subscribe(res => {
       this.num = res.data;
     });
   }

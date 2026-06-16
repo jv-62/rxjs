@@ -36,7 +36,7 @@ export class FilterComponent implements OnInit {
     // Ex - 02 filter by gender
     source
       .pipe(
-        filter(data => data.gender == 'Male'),
+        filter(data => data.gender === 'Male'),
         toArray()
       )
       .subscribe(res => {

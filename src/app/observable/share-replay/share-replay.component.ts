@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -10,17 +10,18 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class ShareReplayComponent implements OnInit {
   url = 'https://test-products-b05fe.firebaseio.com/products.json';
-  allProducts: Observable<any>;
-  moblies: Observable<any>;
-  laptops: Observable<any>;
+  allProducts: Observable<unknown>;
+  moblies: Observable<unknown>;
+  laptops: Observable<unknown>;
+  _http = inject(HttpClient);
 
-  constructor(private _http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.allProducts = this._http.get(this.url).pipe(shareReplay({ bufferSize: 1, refCount: true }));
 
-    this.moblies = this.allProducts.pipe(map((res: any[]) => res.filter(mobileData => mobileData['type'] === 'mobile')));
+    this.moblies = this.allProducts.pipe(map((res: unknown[]) => res.filter(mobileData => mobileData['type'] === 'mobile')));
 
-    this.laptops = this.allProducts.pipe(map((res: any[]) => res.filter(mobileData => mobileData['type'] === 'pc')));
+    this.laptops = this.allProducts.pipe(map((res: unknown[]) => res.filter(mobileData => mobileData['type'] === 'pc')));
   }
 }

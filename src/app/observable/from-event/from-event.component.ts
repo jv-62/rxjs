@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { AppService } from '../../appService/app.service';
 
@@ -7,27 +7,18 @@ import { AppService } from '../../appService/app.service';
   templateUrl: './from-event.component.html',
   styleUrls: ['./from-event.component.scss'],
 })
-export class FromEventComponent implements OnInit, AfterViewInit {
-  constructor(private _service: AppService) {}
+export class FromEventComponent implements AfterViewInit {
+  @ViewChild('addVideoBtn') addVideoBtn?: ElementRef<HTMLInputElement>;
+  _service = inject(AppService);
 
-  @ViewChild('addVideoBtn') addVideoBtn?: ElementRef;
+  constructor() {}
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     if (this.addVideoBtn) {
       let i = 1;
-      fromEvent(this.addVideoBtn.nativeElement, 'click').subscribe(res => {
-        // console.log("Video " + i++)
+      fromEvent(this.addVideoBtn.nativeElement, 'click').subscribe(() => {
         this._service.print('Video ' + i++, 'AddChildElement');
       });
     }
   }
-
-  // print(data: string) {
-  //   // AddChildElement
-  //   let elem = document.createElement('li');
-  //   elem.innerText = data;
-  //   document.getElementById('AddChildElement')?.appendChild(elem);
-  // }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { from, of } from 'rxjs';
 import { AppService } from 'src/app/appService/app.service';
 
@@ -8,9 +8,14 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./of-from.component.scss'],
 })
 export class OfFromComponent implements OnInit {
-  obsMsg: any;
-
-  constructor(private _service: AppService) {}
+  obsMsg: {
+    a: string;
+    b: string;
+    c: string;
+    d: string;
+  };
+  _service = inject(AppService);
+  constructor() {}
 
   ngOnInit(): void {
     // OF
@@ -39,7 +44,7 @@ export class OfFromComponent implements OnInit {
       }, 3000);
     });
     const fromPromiseData = from(promise);
-    fromPromiseData.subscribe(res => {
+    fromPromiseData.subscribe((res: string) => {
       console.log(res);
       this._service.print(res, 'fromPromiseData');
     });

@@ -12,10 +12,12 @@
           <th>Id</th>
           <th>Name</th>
         </tr>
-        <tr *ngFor="let item of data">
-          <td>{{ item.id }}</td>
-          <td>{{ item.name }}</td>
-        </tr>
+        @for (item of data; track item.id) {
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+          </tr>
+        }
       </table>
     </div>
     <div class="col-md-4">
@@ -29,11 +31,13 @@
           <th>Name</th>
           <th>Gender</th>
         </tr>
-        <tr *ngFor="let item of data2">
-          <td>{{ item.id }}</td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.gender }}</td>
-        </tr>
+        @for (item of data2; track item.id) {
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.gender }}</td>
+          </tr>
+        }
       </table>
     </div>
     <div class="col-md-4">
@@ -46,10 +50,12 @@
           <th>Id</th>
           <th>Name</th>
         </tr>
-        <tr *ngFor="let item of data3">
-          <td>{{ item.id }}</td>
-          <td>{{ item.name }}</td>
-        </tr>
+        @for (item of data3; track item.id) {
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+          </tr>
+        }
       </table>
     </div>
   </div>

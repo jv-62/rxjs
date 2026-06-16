@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
@@ -8,22 +8,21 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
   templateUrl: './debounce-time.component.html',
   styleUrls: ['./debounce-time.component.scss'],
 })
-export class DebounceTimeComponent implements OnInit, AfterViewInit {
-  @ViewChild('myInput') myInput: ElementRef;
+export class DebounceTimeComponent implements AfterViewInit {
+  @ViewChild('myInput') myInput: ElementRef<HTMLInputElement>;
+  @ViewChild('myInput2') myInput2: ElementRef<HTMLInputElement>;
   reqData: string = null;
-  @ViewChild('myInput2') myInput2: ElementRef;
   reqData2: string = null;
+  _loadingBar = inject(LoadingBarService);
 
-  constructor(private _loadingBar: LoadingBarService) {}
+  constructor() {}
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     // Ex - 01
-    const searchTerm = fromEvent<any>(this.myInput.nativeElement, 'keyup');
+    const searchTerm = fromEvent<KeyboardEvent>(this.myInput.nativeElement, 'keyup');
     searchTerm
       .pipe(
-        map(event => event.target.value),
+        map(event => (event.target as HTMLInputElement).value),
         debounceTime(500)
       )
       .subscribe(res => {
@@ -36,10 +35,10 @@ export class DebounceTimeComponent implements OnInit, AfterViewInit {
         }, 1000);
       });
     // Ex - 02
-    const searchTerm2 = fromEvent<any>(this.myInput2.nativeElement, 'keyup');
+    const searchTerm2 = fromEvent<KeyboardEvent>(this.myInput2.nativeElement, 'keyup');
     searchTerm2
       .pipe(
-        map(event => event.target.value),
+        map(event => (event.target as HTMLInputElement).value),
         debounceTime(500),
         distinctUntilChanged()
       )

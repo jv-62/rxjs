@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { from, Observable, of } from 'rxjs';
 import { concatMap, delay, mergeMap, switchMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -9,7 +9,9 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./switchmap.component.scss'],
 })
 export class SwitchmapComponent implements OnInit {
-  constructor(private _service: AppService) {}
+  _service = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
     const source = from(['Tech', 'Comedy', 'News']);
@@ -30,7 +32,7 @@ export class SwitchmapComponent implements OnInit {
     });
   }
 
-  getData(data): Observable<string> {
+  getData(data: string): Observable<string> {
     return of(data + ' Video Uploaded').pipe(delay(1000));
   }
 }

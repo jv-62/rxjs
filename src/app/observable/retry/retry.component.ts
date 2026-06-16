@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { delay, retryWhen, scan } from 'rxjs/operators';
 
 @Component({
@@ -8,10 +8,12 @@ import { delay, retryWhen, scan } from 'rxjs/operators';
   styleUrls: ['./retry.component.scss'],
 })
 export class RetryComponent {
-  users: any;
+  users: unknown;
   fetching = false;
   status = 'No Data';
-  constructor(private _http: HttpClient) {}
+  _http = inject(HttpClient);
+
+  constructor() {}
 
   fetchDetails(): void {
     this.fetching = true;

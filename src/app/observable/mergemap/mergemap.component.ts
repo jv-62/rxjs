@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { from, Observable, of } from 'rxjs';
 import { map, mergeAll, mergeMap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -9,7 +9,9 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./mergemap.component.scss'],
 })
 export class MergemapComponent implements OnInit {
-  constructor(private _service: AppService) {}
+  _service = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
     const source = from(['Tech', 'Comedy', 'News']);

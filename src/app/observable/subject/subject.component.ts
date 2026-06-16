@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { AppService } from 'src/app/appService/app.service';
 
 @Component({
@@ -8,8 +8,9 @@ import { AppService } from 'src/app/appService/app.service';
 })
 export class SubjectComponent implements OnInit, OnDestroy {
   userName: string;
+  _service = inject(AppService);
 
-  constructor(private _service: AppService) {}
+  constructor() {}
 
   ngOnInit(): void {
     this._service.userName.subscribe(res => {

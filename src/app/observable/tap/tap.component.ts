@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -12,8 +12,9 @@ export class TapComponent implements OnInit {
   obs: Subscription;
   obs2: Subscription;
   myColor;
+  _service = inject(AppService);
 
-  constructor(private _service: AppService) {}
+  constructor() {}
 
   ngOnInit(): void {
     const source = interval(1000);

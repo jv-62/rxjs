@@ -46,7 +46,6 @@
         ],
         "@angular-eslint/component-class-suffix": "error",
         "@angular-eslint/directive-class-suffix": "error",
-        "@angular-eslint/no-host-metadata-property": "error",
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/explicit-module-boundary-types": "error",
         "@typescript-eslint/no-unsafe-argument": "error",

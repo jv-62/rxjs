@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { interval, merge } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -8,7 +8,9 @@ import { AppService } from 'src/app/appService/app.service';
   styleUrls: ['./merge.component.scss'],
 })
 export class MergeComponent implements OnInit {
-  constructor(private _service: AppService) {}
+  _service = inject(AppService);
+
+  constructor() {}
 
   ngOnInit(): void {
     const sourceTech = interval(3000).pipe(

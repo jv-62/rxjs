@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { from, interval, timer } from 'rxjs';
 import { map, take, takeLast, takeUntil } from 'rxjs/operators';
 import { AppService } from 'src/app/appService/app.service';
@@ -10,8 +10,9 @@ import { AppService } from 'src/app/appService/app.service';
 })
 export class TakeComponent implements OnInit {
   namesArray = ['Jayam', 'Typescript', 'Javascript', 'Nodejs', 'Rxjs', 'Laptop'];
+  _service = inject(AppService);
 
-  constructor(private _service: AppService) {}
+  constructor() {}
   ngOnInit(): void {
     const nameSource = from(this.namesArray);
 
