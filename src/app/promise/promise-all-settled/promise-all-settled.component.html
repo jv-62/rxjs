@@ -1,15 +1,16 @@
 <div class="promise-card">
   <h3>Promise.allSettled</h3>
   <p>Waits for all promises to settle, then returns their outcome objects.</p>
-  <div *ngIf="settledResults.length; else pending">
+  @if (settledResults.length) {
     <ul>
-      <li *ngFor="let item of settledResults">
-        <strong>{{ item.status }}</strong
-        >: {{ item.status === 'fulfilled' ? item.value : item.reason }}
-      </li>
+      @for (item of settledResults; track item.status) {
+        <li>
+          <strong>{{ item.status }}</strong
+          >: {{ item.status === 'fulfilled' ? item.value : item.reason }}
+        </li>
+      }
     </ul>
-  </div>
-  <ng-template #pending>
+  } @else {
     <p class="text-muted">Waiting for all promises to settle...</p>
-  </ng-template>
+  }
 </div>
