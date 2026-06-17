@@ -28,7 +28,7 @@ import { TakeComponent } from './observable/take/take.component';
 import { TapComponent } from './observable/tap/tap.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { ZipComponent } from './observable/zip/zip.component';
-import { PromiseComponent } from './promise/promise.component';
+import { PromiseComponent } from './promise/promise/promise.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'promise', pathMatch: 'full' },

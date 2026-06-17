@@ -1,0 +1,11 @@
+<div class="promise-card">
+  <h3>Promise.race</h3>
+  <p>Returns the first promise that settles, whether fulfilled or rejected.</p>
+  <div *ngIf="result || error; else pending">
+    <p *ngIf="result"><strong>Result:</strong> {{ result }}</p>
+    <p *ngIf="error" class="text-danger"><strong>Error:</strong> {{ error }}</p>
+  </div>
+  <ng-template #pending>
+    <p class="text-muted">Waiting for the first promise to settle...</p>
+  </ng-template>
+</div>

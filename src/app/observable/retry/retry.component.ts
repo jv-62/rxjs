@@ -8,7 +8,13 @@ import { delay, retryWhen, scan } from 'rxjs/operators';
   styleUrls: ['./retry.component.scss'],
 })
 export class RetryComponent {
-  users: unknown;
+  users: {
+    id: number;
+    name: string;
+    email: string;
+    phone: number;
+    website: string;
+  };
   fetching = false;
   status = 'No Data';
   _http = inject(HttpClient);
@@ -38,7 +44,7 @@ export class RetryComponent {
         )
       )
       .subscribe(
-        res => {
+        (res: { id: number; name: string; email: string; phone: number; website: string }) => {
           console.log(res);
           this.status = 'Data Fetched';
           this.fetching = false;

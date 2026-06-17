@@ -1,0 +1,13 @@
+<div class="promise-card">
+  <h3>Promise.all</h3>
+  <p>Waits for all promises to fulfill. If any promise rejects, the entire call rejects.</p>
+  <div *ngIf="results.length; else pending">
+    <ul>
+      <li *ngFor="let item of results">{{ item }}</li>
+    </ul>
+  </div>
+  <ng-template #pending>
+    <p class="text-muted">Waiting for all promises...</p>
+  </ng-template>
+  <p *ngIf="error" class="text-danger">Error: {{ error }}</p>
+</div>
